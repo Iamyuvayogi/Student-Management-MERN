@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const colors = require("colors/index.js");
 const connectDB = require("./config/connectDB.js");
 const studentRoutes = require("./routes/studentRoutes.js");
 connectDB();
@@ -20,5 +19,5 @@ app.use("/api", studentRoutes);
 
 const PORT = process.env.PORT || 8800;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`.bgGreen);
+  console.log(`Server is running on port ${PORT}`);
 });
